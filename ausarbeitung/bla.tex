@@ -1,7 +1,7 @@
 %
 \documentclass[parskip,headsepline, headtopline, %
-footsepline, oneside, 12pt, headings=small]{scrbook}
-\usepackage[ngerman, english]{babel}
+footsepline, oneside, 12pt, headings=small]{scrreprt}
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
 \usepackage{pdfpages} % To include other PDFs
@@ -68,15 +68,16 @@ footsepline, oneside, 12pt, headings=small]{scrbook}
 % Metadata (Change this)
 % ------------------------------------------------------------------------------
 \title{ \fontsize{50}{60}\selectfont \\[2.10cm]
-\hfill \begin{veryhuge}{\fontfamily{@arialn}\selectfont {\fontfamily{txtt}\selectfont The {\fontfamily{@bradhitc}\selectfont Design} for all}}\end{huge}
- \hfill \large{\begin{flushright}Ein Exkurs übers Denken, Gedachtes und Dahergedachtes\end{flushright}} \\[1.9cm]
- \hfill \small{On computable processes with an application to the Kunstproblem \textbackslash\textbackslash  Sommer term 2012} 
+\hfill \begin{huge}{\fontfamily{@arialn}\selectfont {\fontfamily{txtt}\selectfont The Design for all}}\end{huge}
+ \hfill \large{\begin{flushright}Psychologie, Design, Emotionen\end{flushright}} \\[1.9cm]
+ \hfill \small{On computable processes with an application to the Kunstproblem \textbackslash\textbackslash  Winter term 2012/2013} 
 }
 \author{
                 \hfill Martha Rohte und Maria Meister\\  
                 \hfill University of Bremen\\   
                 \hfill Department of Mathematics \& Computer Science \\
-        \hfill \texttt{{\fontfamily{cmr}\selectfont mmeister@informatik.uni-bremen.de}} \\
+        \hfill \texttt{\fontfamily{cmr}\selectfont mata@informatik.uni-bremen.de} \\
+        \hfill \texttt{\fontfamily{cmr}\selectfont mmeister@informatik.uni-bremen.de} \\
 }
 
 
@@ -103,12 +104,7 @@ footsepline, oneside, 12pt, headings=small]{scrbook}
 \clearpage
 
 \begin{abstract}
-Prolog \\ 
-Das Wort Computer hat in den 50er seinen Weg in unseren Sprachschatz gefunden.Als Folge der technischen Revolution, war er als bald ueberall praesent. Diese Geraet vermochte es wie keine andere technische Erfindung  zuvor unsere Wahrnehmung von Woerter zu praegen. So kam es das Informationen, die zuvor nur langweilige Papierarbeit waren, ausgefuehrt von noch langweiligen Papierhengsten, ploetzlich maschienell in einer Geschwindigkeit verabeitet werden konnten, dass diie Menschen sich an ihr eigenes Gehirn erinnert fuehlten. Infolgedessen lag es nicht fern anzunehmen, dass Computer in naehren Zukunft in der Lage waeren wie ihr menschliches Ebenbild zu denken, verfuegten sie denn nicht auch ueber Memory, Sprachen und Logik etc.\\
-Nun rund 60 Jahre spaeter, koennen Computer vieles auch in Bunt und mit Grafiken, trotzdem scheint es, dass sie noch Lichtjahre(und mir faellt an dieser Stelle keine kleiner Einheit ein) vom sogenannten Denken entfernt sind. Aber was ist "denken" eigentlich? Was macht es aus? Und warum sollte eine zahlendverarbeitende Maschine()in der Lage sein selbiges zu tun oder auch nicht?
-Um diese Frage beantworten zu koennen muessen wir wohl oder uebel uns auf der einen Seite mit dem Menschen und seiner Wahrnehmung der Faehigkeit zu Denken auseinandersetzen. Auf der anderne Seite muessen wir uns mit diesem wunderlichen Ding namens Computer beschaeftigen, wo es seine Anfaenge hat warum es wie viele technische Errungenschaften nicht nur einen Mesiasstatus erhalten hat sondern - so scheint es zu einer Religion mutiert ist.
-\\
-Abschliessend werde ich von meiner Fahigkeit zu Denken Gebrauch machen und durch eine Gegenueberstellung Menschliches und maschnielles "Denken" oder auch Verarbeiten verssuchen die Frag zu beantworten: Does thinking compute?\\
+
 \end{abstract}
 % NOTE: '?' is placeholder for selected text 
 % or caret location (when no selection).
@@ -118,25 +114,44 @@ Abschliessend werde ich von meiner Fahigkeit zu Denken Gebrauch machen und durch
  
 % Chapter A
 \setChapterQuote{A thought is an idea in transit.}{Pythagoras}{582 B.C. - 497 B.C.}
-\chapter{Denken}
-\section{State of art}
+\chapter{Alltagsdesign}
+\section{Norman}
+
+Der das Buch geschrieben hat, ursprünglich Psychologe, setzt er sich immer mehr mit der Benutzbarkeit zuerst von Alltagsgegenständen und auch von informatischen Produkten auseinander. Sein Buch \glqq Psychology of Everyday Things \grqq ist zu großer Beliebtheit in den Kreisen der Usability Forschung und des Designs gelangt. 
+
+\section{Technologieparadoxon}
+
+“Whenever the number of functions and required operations exceeds the number of controls, the design becomes arbitrary, unnatural, and complicated. 
+	The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn, harder to use. This is the paradox of technology.”
+
+\section{Designaspekte}
+	Sichtbarkeit
+	Feedback
+	Mapping
+	Affordanz
+	Constraints
+\section{Konzeptuelle Modelle}
+\section{Aktion}
+
+\includegraphics[width=\textwidth]{images/ActionCycle.png}
+
+\section{Fehler}
+\section{Wissen}
 
  
 % Chapter B
 \setChapterQuote{Much wisdom often goes with fewest words.}{Sophocles}{496 B.C. - 406 B.C.}
-\chapter{Gedachtes:Der Mythos Computer}
+\chapter{Design und Emotion}
+\section{Kansei engineering}
 
  
-\section{Historischer Hintergrund}
-Informationszeitalter
-\section{Kernaussagen}
-\subsection{Informationsspeicheung/-verabeitung vs. Denken}
-"fundamenttalen Unterschied gibt zwischen dem, was ein Mawschinen tun, wenn sie Informationen verarbeiten, und dem was Gehirne tun, wenn sie denken"(S.12)
-speichern entspricht irgendwie dem Vermoegen des menschlichen Gedaechnis entspricht und Verabeitung analog dem Folgern 
-
-% Chapter B
-\chapter{Daherhergdachtes: Persoenliche Schlussfolgerungen}
+% Chapter C
+\chapter{Resümee - Folgen für das Softwaredesign}
 \section{Bezug auf den Kurs}
 \section{Resumee}
- symbole der erloesung seite 10
+
+\begin{thebibliography}{9}
+	\bibitem {don} Norman, Donald (1988). The Design of Everyday Things. New York: Basic Books. ISBN 978-0-465-06710-7 
+\end{thebibliography}
+
 \end{document}
