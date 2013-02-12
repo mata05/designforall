@@ -165,12 +165,7 @@ Der Designaspekt Contraints beschreibt Beschraenkungen, die aufgrund bestimmmter
 
 \section{Aktion}
 
-Nach Norman laufen die Aktionen in einem Zyklus ab (Vgl. Abb. \ref{fig:action}). Dieser besteht aus zwei Teilen: dem Gulf of Execution und dem Gulf of Evaluation. Zuerst muss der Handelnde in seinem Kopf ein Ziel bilden wie zum Beispiel \glqq Ich möchte lesen (können, aber dazu ist es zu dunkel).\grqq Um eine Handlung auszuführen, muss er nun den Gulf of Execution überbrücken. Hierzu muss er zuerst die Intention bilden \glqq Ich schalte die Leselampe an.\grqq, die Aktion spezifizieren \glqq Ich muss den Arm ausstrecken, den Schalter fassen und den Schalter umlegen.\grqq und die Aktion schließlich auch wirklich ausführen. Als Resultat ändert sich der Zustand der Welt. Um diesen wahrzunehmen und zu bewerten, muss der Handende nun den Gulf of Evaluation überbrücken. Dies beginnt damit, dass der Zustand der Welt wahrgenommen wird \glqq Es ist (nicht) hell.\grqq Danach wird der Zustand der Welt interpretiert: \glqq Die Lampe scheint (nicht).\grqq Letztlich wird das Ergebnis evaluiert: \glqq Ich kann jetzt (immer noch nicht) lesen.\grqq
-
-Damit ist dieser Zyklus beendet. Ist das Ergebnis positiv, so wird ein neuer Zyklus begonnen oder ein übergeordneter Zyklus fortgesetzt (\glqq Ich lese das Buch. / Ich fange an das Buch zu lesen. \grqq). Ist das Ergebnis hingegen negativ, so wird der Zyklus entweder mit einer anderen Intention wiederholt (\glqq Ich will Licht. \textrightarrow Ich schalte die Zimmerlampe an. \grqq) oder der Zyklus wird verfeinert (\glqq Ich überprüfe die Funktionsfähigkeit der Lampe: Hat sie Strom? Ist die Glühlampe defekt?  \grqq). Die verschiedenen Aktionszyklen können beliebig ineinander übergehen bzw. verschachtelt werden. 
-
-Ein gutes Design verkleinert dabei die beiden Gulfs soweit wie möglich, denn je geringer die Schritte sind, desto unwahrscheinlicher ist es Fehler zu machen und umso weniger Zeit vergeht eine Aktion auszuführen. Für die Ausführung sind dabei die Sichtbarkeit, das Mapping, die Affordanzen und die Constraints entscheidend; all dies kann bei guter Anwendung die Überquerung des Gulf of Execution vereinfachen. Hingegen ist für die Evaluation das Feedback am wichtigsten, denn dieses wird an der Veränderung der Welt gemessen. Je direkter und einfacher zu interpretieren das Feedback ist, umso schmaler ist der Gulf of Evaluation. Ein gutes Beispiel hierfür sind die altbekannten Lampen: sobald man den Schalter gedrückt hat geht die Lampe an --- oder eben auch nicht. Wobei bei neueren Lampen, so wie zum Beispiel Energiesparlampen, das Feedback zwar noch ausreichend aber nicht mehr ganz so überragend ist: die Lampen leuchten oft nur verzögert auf oder werden erst kontinuierlich hell, im ersten Moment mag der uneingeweihte Benutzer vermuten, dass die Lampe defekt ist. 
-%Bsp. einfaches aber aufwändigeres Feedback ist Flicken vom Fahrradschlauch: Ist er dicht?
+Nach Norman laufen die Aktionen in einem Zyklus ab (Vgl. Abb. \ref{fig:action}, \cite[S. 46ff]{don}). Dieser besteht aus zwei Teilen: dem Gulf of Execution und dem Gulf of Evaluation. Zuerst muss der Handelnde in seinem Kopf ein Ziel bilden wie zum Beispiel \glqq Ich möchte lesen (können, aber dazu ist es zu dunkel).\grqq Um eine Handlung auszuführen, muss er nun den Gulf of Execution überbrücken. Hierzu muss er zuerst die Intention bilden \glqq Ich schalte die Leselampe an.\grqq, die Aktion spezifizieren \glqq Ich muss den Arm ausstrecken, den Schalter fassen und den Schalter umlegen.\grqq und die Aktion schließlich auch wirklich ausführen. Als Resultat ändert sich der Zustand der Welt. Um diesen wahrzunehmen und zu bewerten, muss der Handende nun den Gulf of Evaluation überbrücken. Dies beginnt damit, dass der Zustand der Welt wahrgenommen wird \glqq Es ist (nicht) hell.\grqq Danach wird der Zustand der Welt interpretiert: \glqq Die Lampe scheint (nicht).\grqq Letztlich wird das Ergebnis evaluiert: \glqq Ich kann jetzt (immer noch nicht) lesen.\grqq
 
 \begin{figure}
 \includegraphics[width=\textwidth]{images/ActionCycle.png}
@@ -178,15 +173,20 @@ Ein gutes Design verkleinert dabei die beiden Gulfs soweit wie möglich, denn je
 \label{fig:action}
 \end{figure}
 
+Damit ist dieser Zyklus beendet. Ist das Ergebnis positiv, so wird ein neuer Zyklus begonnen oder ein übergeordneter Zyklus fortgesetzt (\glqq Ich lese das Buch. / Ich fange an das Buch zu lesen. \grqq). Ist das Ergebnis hingegen negativ, so wird der Zyklus entweder mit einer anderen Intention wiederholt (\glqq Ich will Licht. \textrightarrow Ich schalte die Zimmerlampe an. \grqq) oder der Zyklus wird verfeinert (\glqq Ich überprüfe die Funktionsfähigkeit der Lampe: Hat sie Strom? Ist die Glühlampe defekt?  \grqq). Die verschiedenen Aktionszyklen können beliebig ineinander übergehen bzw. verschachtelt werden. 
+
+Ein gutes Design verkleinert dabei die beiden Gulfs soweit wie möglich, denn je geringer die Schritte sind, desto unwahrscheinlicher ist es Fehler zu machen und umso weniger Zeit vergeht eine Aktion auszuführen. Für die Ausführung sind dabei die Sichtbarkeit, das Mapping, die Affordanzen und die Constraints entscheidend; all dies kann bei guter Anwendung die Überquerung des Gulf of Execution vereinfachen. Hingegen ist für die Evaluation das Feedback am wichtigsten, denn dieses wird an der Veränderung der Welt gemessen. Je direkter und einfacher zu interpretieren das Feedback ist, umso schmaler ist der Gulf of Evaluation. Ein gutes Beispiel hierfür sind die altbekannten Lampen: sobald man den Schalter gedrückt hat geht die Lampe an --- oder eben auch nicht. Wobei bei neueren Lampen, so wie zum Beispiel Energiesparlampen, das Feedback zwar noch ausreichend aber nicht mehr ganz so überragend ist: die Lampen leuchten oft nur verzögert auf oder werden erst kontinuierlich hell, im ersten Moment mag der uneingeweihte Benutzer vermuten, dass die Lampe defekt ist. 
+%Bsp. einfaches aber aufwändigeres Feedback ist Flicken vom Fahrradschlauch: Ist er dicht?
+
 \section{Fehler}
 
-Da irren nun einmal menschlich ist, unterlaufen allen Menschen gelegentlich Fehler. Norman unterscheidet diese Fehler in zwei grundlegende Arten: Die Erste sind die Fehlleistungen, im Englischen \glqq Slips\grqq  genannt. Diese beschreiben unintendierte Handlungen. Die Zweite sind die Irrtümer, im Englischen \glqq Mistakes\grqq. Sie beschreiben nicht erwartete und erwünschte Ergebnisse, die auf vermeintlich korrekte Handlungen folgen.
+Da irren nun einmal menschlich ist, unterlaufen allen Menschen gelegentlich Fehler. Norman unterscheidet diese Fehler in zwei grundlegende Arten \cite[S. 105]{don}: Die Erste sind die Fehlleistungen, im Englischen \glqq Slips\grqq  genannt. Diese beschreiben unintendierte Handlungen. Die Zweite sind die Irrtümer, im Englischen \glqq Mistakes\grqq. Sie beschreiben nicht erwartete und erwünschte Ergebnisse, die auf vermeintlich korrekte Handlungen folgen.
 
 \subsection{Fehlleistungen (Slips)}
 
 Die Fehlleistungen beruhen im Allgemeinen darauf, dass eine Handlung automatisiert abläuft oder unaufmerksam auf Grund ihrer (vermeintlichen) Einfachheit ausgeführt wird. Sie sind meist einfach zu erkennen und sollten in einem guten Design einfach zu berichtigen sein.
 
-Norman unterscheidet sechs verschiedene Arten von Fehlleistungen:
+Norman unterscheidet sechs verschiedene Arten von Fehlleistungen\cite[S. 107]{don}:
 
 \begin{itemize}
 \item \textbf{Fangfehler} sind Fehler, die passieren, wenn die Anfangssequenz von zwei Aktionen identisch sind, wobei die beabsichtigte Aktion unvertrauter ist und daher von der vertrauteren \glqq aufgefangen\grqq wird. Zum Beispiel, wenn man sein Geburtsdatum schreiben soll, aber als Jahr das aktuelle Jahr einträgt.
@@ -197,11 +197,23 @@ Norman unterscheidet sechs verschiedene Arten von Fehlleistungen:
 \item \textbf{Modus-Fehler} treten ausschließlich auf, wenn Geräte verschiedene Modi haben. Wird versucht eine Handlung auszuführen, die in einem Modus nicht möglich ist, obwohl sich das Gerät in diesem befindet, so ist dies ein Modus-Fehler. Ein Beispiel ist, wenn man versucht in einem Dokument zu schreiben während dieses im schreibgeschützten (read-only) Modus geöffnet ist.
 \end{itemize}
 
+Nach Möglichkeit sollte während des Designvorgangs darauf geachtet werden, dass diese Fehlleistungen vermieden werden, dass das Design also möglichst Fehlertolerant ist. Aus diesem Grund sind zum Beispiel in einem Firmennetzwerk häufig die Telefonnummern mit den Raumnummern identisch.
+
 \subsection{Irrtümer (Mistakes)}
 
-Schwer zu erkennen, schwer zu vermeiden oft drastische Folgen
+Irrtümer sind im Gegensatz zu Fehlleistungen oft nur schwer oder spät zu erkennen und deshalb auch nur schwer zu vermeiden. Hinzu kommt, dass sie oft weitaus drastischere Folgen als Fehlleistungen haben. Sie sind das Resultat von dem Verfolgen ungeeigneter Ziele \cite[S. 114]{don}. Ihr Ursprung liegt viel mehr in dem Entscheidungsverhalten der Menschen, darin, dass Erfahrungswerte oft höher bewertet werden als logisches Denken, beziehungsweise letzteres noch nicht einmal bemüht wird, wenn ersteres vorliegt.
 
 \section{Wissen}
+
+\begin{tabular}{ll}
+\textbf{Wissen im Kopf} & \textbf{Verfügbares Wissen}\\
+&\\
+Großer Lernaufwand & Geringer/kein Lernaufwand\\
+Langzeitgedächtnis & Kurzzeitgedächtnis\\
+Hohe Effizienz & Geringe Effizienz\\
+Erste Verwendung schwer & Erste Verwendung leicht\\
+Unabhängig von der Umgebung & Abhängig von der Umgebung\\
+\end{tabular}
 
 Wissen im Kopf, Wissen in der Welt, beide haben verschiedene Vor- und Nachteile. Es besteht immer ein Trade-off, Der jeweilige Anwendungskontext sollte darüber entscheiden wo die Informationen aufbewahrt werden, möglicherweise auch in beidem.
 
