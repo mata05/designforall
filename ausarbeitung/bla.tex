@@ -145,6 +145,7 @@ Der das Buch geschrieben hat, ursprünglich Psychologe, setzt er sich immer mehr
 	The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn, harder to use. This is the paradox of technology.”
 
 \section{Designaspekte}
+\label{sec:aspekte}
 
 Laut Norman ist das zentrale Prinzip von Desinen, Dinge so zu entwerfen, dass ie Erwartungshaltung des Nutzers bezogen auf die Funktionsweise der einzelenen Elemente auch mit ihrer tatsaechlichen Funktionalitaet uebereinstimmt, sodass der Nutzer in der Lage versetzt wird akurrat agieren zu koennen.\\ 
 Als Ausgangsbedingung dafuer gibt es fuenf zentrale Aspekte, die eingehalten werden muessen, um  ein moeglichst intuitives Design bereitzustellen. Die Prinzipien 
@@ -212,17 +213,32 @@ Irrtümer sind im Gegensatz zu Fehlleistungen oft nur schwer oder spät zu erken
 
 \section{Wissen}
 
-\begin{tabular}{ll}
-\textbf{Wissen im Kopf} & \textbf{Verfügbares Wissen}\\
-&\\
-Großer Lernaufwand & Geringer/kein Lernaufwand\\
-Langzeitgedächtnis & Kurzzeitgedächtnis\\
-Hohe Effizienz & Geringe Effizienz\\
-Erste Verwendung schwer & Erste Verwendung leicht\\
-Unabhängig von der Umgebung & Abhängig von der Umgebung\\
+Die Funktionsweise von allen Dingen, die komplexer sind als ein gewöhnlicher Hocker, muss der Benutzer auf irgendeine Weise erlernt haben. Dies kann grundsätzlich auf zwei verschiedene Arten geschehen: Zum Einen kann der Benutzer das Wissen über die Funktionsweise auswendig gelernt haben; das Wissen befindet sich also im Kopf. Zum Anderen kann sich das Wissen auch direkt aus dem Design erschließen (siehe dazu Kapitel \ref{sec:aspekte}), das Wissen ist also unmittelbar bei jeder Benutzung verfügbar \cite[S.54ff]{don}. 
+Dabei bestehen zwischen beiden Möglichkeiten mehrere Trade-offs:
+
+\begin{tabular}{|p{.4\textwidth}|p{.4\textwidth}|}\hline\vspace{6pt}
+\hspace{1cm}\textbf{Wissen im Kopf} & \vspace{6pt}\hspace{1cm}\textbf{Verfügbares Wissen}\\
+\begin{itemize}
+\item Großer Lernaufwand
+\item Langzeitgedächtnis
+\item Hohe Effizienz
+\item Erste Verwendung schwer
+\item Unabhängig von der Umgebung
+\end{itemize} &
+\begin{itemize}
+\item Geringer/kein Lernaufwand
+\item Kurzzeitgedächtnis
+\item Geringe Effizienz
+\item Erste Verwendung leicht
+\item Abhängig von der Umgebung
+\end{itemize}
+\\\hline
 \end{tabular}
 
-Wissen im Kopf, Wissen in der Welt, beide haben verschiedene Vor- und Nachteile. Es besteht immer ein Trade-off, Der jeweilige Anwendungskontext sollte darüber entscheiden wo die Informationen aufbewahrt werden, möglicherweise auch in beidem.
+Welche Art nun gewählt wird, hängt stark von dem Anwendungskontext ab, wobei im Regelfall eine Mischung von beidem vorliegt, so dass der erfahrene Benutzer nicht mehr nachschauen muss, wie es funktioniert. Hierfür ist die Schreibmaschinentastatur ein perfektes Beispiel: Benutzer, die das zehn-Finger-System beherrschen, brauchen nicht mehr auf die Tastatur zu schauen um jeden einzelnen Buchstaben zu finden, womit sich ein unerfahrener Benutzer aber durchaus noch behelfen kann, auch wenn er für die gleiche Menge an Text deutlich länger brauchen wird.\\
+Ein anderes Beispiel sind sicherheitskritische Anwendungen. Gewöhnlich werden diese, wie beispielsweise die Bedienung eines Flugzeuges, mit viel Aufwand und Kosten erlernt und immer wieder geübt, damit sie im Ernstfall zumindest halbautomatisch ablaufen und darüber hinaus weitaus weniger Zeit beanspruchen als wenn der Benutzer erst herausfinden muss, wie es bedient wird.\\
+Im Gegensatz dazu sollten Anwendungen, die jeder benutzen können soll und dies aber nur selten oder nicht regelmäßig tut, auf den ersten Blick verständlich sein. Hierfür ist ein Fahrkartenautomat der Deutschen Bahn ein gutes Beispiel: Der durchschnittliche Benutzer ist ungeduldig, will keine große Suche betreiben, nicht irritiert werden und hat meistens eine kleine Phobie vor der Bedienung dieser Automaten, die umso größer ist, je seltener die Automaten benutzt werden. Da vermutlich niemand die Funktionsweise auswendig lernen möchte, muss sie also aus dem Automaten selbst ersichtlich sein. Auch wenn es seit ein paar Jahren eine neue Software für diese Automaten gibt, die sowohl die Bedienbarkeit als auch das Aussehen stark verbessert haben, so scheinen noch genug Leute diese nicht zu verstehen, dass eine extra Anwendung --- über die Internetseite der Deutschen Bahn zugänglich --- existiert, mit der man die Bedienung dieser Automaten erlernen kann \cite{bahn}. Wobei man sowohl mit der alten als auch mit der neuen Software durch alle Schritte geleitet wurde und man problemlos an seine Fahrkarte kam --- wenn man genug Geduld aufbrachte, um die Anweisungen genau durchzulesen.
+
 
  
 % Chapter B
@@ -238,6 +254,7 @@ Wissen im Kopf, Wissen in der Welt, beide haben verschiedene Vor- und Nachteile.
 
 \begin{thebibliography}{9}
 	\bibitem {don} Norman, Donald (1988). The Design of Everyday Things. New York: Basic Books. ISBN 978-0-465-06710-7 
+	\bibitem {bahn} \url{http://www.bahn.de/p/view/service/vertriebswege/automat/nta.shtml}, abgerufen am 12.2.2013
 \end{thebibliography}
 
 \end{document}
