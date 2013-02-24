@@ -24,10 +24,35 @@ footsepline, oneside, 12pt, headings=small]{scrreprt}
 % Pretty chapter pages
 %------------------------------------------
 \definecolor{nicered}{rgb}{.647,.129,.149}
+\definecolor{darkblue}{rgb}{0,0,.5}
 \usepackage{soul}
 
 % hyperref has to be used last
-\usepackage{hyperref}
+\usepackage[
+    bookmarks,
+    bookmarksopen=true,
+    colorlinks=true,
+% diese Farbdefinitionen zeichnen Links im PDF farblich aus
+    linkcolor=darkblue, % einfache interne Verkn�pfungen
+    anchorcolor=darkblue,% Ankertext
+    citecolor=darkblue, % Verweise auf Literaturverzeichniseintr�ge im Text
+    filecolor=darkblue, % Verkn�pfungen, die lokale Dateien �ffnen
+    menucolor=darkblue, % Acrobat-Men�punkte
+    urlcolor=darkblue, 
+% diese Farbdefinitionen sollten f�r den Druck verwendet werden (alles schwarz)
+    %linkcolor=black, % einfache interne Verkn�pfungen
+    %anchorcolor=black, % Ankertext
+    %citecolor=black, % Verweise auf Literaturverzeichniseintr�ge im Text
+    %filecolor=black, % Verkn�pfungen, die lokale Dateien �ffnen
+    %menucolor=black, % Acrobat-Men�punkte
+    %urlcolor=black, 
+    %backref,
+    plainpages=false, % zur korrekten Erstellung der Bookmarks
+    pdfpagelabels, % zur korrekten Erstellung der Bookmarks
+    hypertexnames=false, % zur korrekten Erstellung der Bookmarks
+    linktocpage % Seitenzahlen anstatt Text im Inhaltsverzeichnis verlinken
+]{hyperref}
+
 \makeatletter
 \newsavebox{\feline@chapter}
 \newcommand\feline@chapter@marker[1][4cm]{%
@@ -133,18 +158,26 @@ footsepline, oneside, 12pt, headings=small]{scrreprt}
 \addcontentsline{toc}{chapter}{Einleitung}
 
 
-In Rahmen de eranstaltung Design for nobody haben wir uns mit dem Buch Desin for everyday things auseinandergesetzt. Dieses befasst sich mit der  Benutzbarkeit von Alltagsgegenstaenden. bzw. deren nciht Benutzbarkeit durch falsches Design. In dieser Ausarbeitung wollen wir kurz die Problematik auffueheren,  um uns dann der Frage zu widmen woher schlechtes Design kommt bzw. was gutes Design ausmacht. Im Anschluss dazu werden wir den Bezug auf die Veranstaltung nehmen, um eine umfassendes Resumee ziehen zu koennen.
+In Rahmen der Veranstaltung \textbf{Design for All} haben wir uns mit dem Buch The Design of Everyday Things auseinandergesetzt. Dieses befasst sich mit der  Benutzbarkeit von Alltagsgegenständen bzw. deren Nichtbenutzbarkeit durch falsches Design. In dieser Ausarbeitung wollen wir kurz die Problematik aufführen, um uns dann der Frage zu widmen, woher schlechtes Design kommt bzw. was gutes Design ausmacht. Im Anschluss dazu werden wir den Bezug auf die Veranstaltung nehmen, um eine umfassendes Resümee ziehen zu können.
 
-Anfang diese Jahres veroeffentliche die taiwanesische Firma HTC das HTC Mini \cite{htc}, wobei es sich um eine Fernbedienug fuer das HTC Butterfly Handy handelt. MIt Hife dieser Fernbedienung allerlei Funktionen auslagern. Grundsaetzlih koennten man sich nun fragen, warum ist es ueberhaupt notwendig ist eine Fernbedinung fuer ein Mobiltelefon zu haben? Denkbar waeren da mehrere Gruende, zum einen zuviel Funktionaltitaet fuer den verfuegbare Flaeche, da die Displaygroesse eines der ausschlaggebensten Krititerien fuer den Kauf eines Mobieltelefon ist. Zum andern koennen die pysische Knoepfe als Bedienungselemente nicht nur als bekannt voraussetzen werden, sondern auch auf haptischer Ebene befriedigter fuehren. Durch die Auslagerung werden aber auch der Funktionsumfang auf den jeweiligen Geraten verringert.
-Grundsaetzlich scheint der Umfang der Funkttionalitaet zu komplex zu sein um sie auf ein Proodukt abbzubilden. Eine Problematik mit der sich heutzutage viele Produktdesigner konfrotiert sind. es stellt sich nun auch auchdie Frage, ob man einen grossen Fokus auf die Benutzbarkeit oder das Design eines Produktes legt. Meistens wird in dieser Frage aus oeknomisch Gruenden zu Gunsten des Design bzw Aesthetik entschieden.
-Mit dieser Diskrepanz setzt sich Norman in seinen Buch auseinander, dort zeigt er die Folgen auf und  seine selbstentwickelten Gegenmassnahmen, um trotzdem ein gewissen Grad an Benutzbarkeit sicherzustellen.
+\begin{figure}
+\center
+\includegraphics[width=.4\textwidth]{images/HTC-Butterfly}
+\includegraphics[width=.4\textwidth]{images/htc-mini-fernbedienung}
+\caption{Das HTC Butterfly und die dazugehörige Fernbedienung}
+\label{fig:htc}
+\end{figure}
+
+Anfang diese Jahres veröffentliche die taiwanesische Firma HTC das HTC Mini \cite{htc}, wobei es sich um eine Fernbedienung für das HTC Butterfly Handy handelt. Mit Hilfe dieser Fernbedienung werden allerlei Funktionen ausgelagert. Grundsätzlich könnte man sich nun fragen, warum ist es überhaupt notwendig ist eine Fernbedienung für ein Mobiltelefon zu haben? Denkbar wären da mehrere Gründe, zum einen zu viel Funktionalität für den verfügbare Fläche, da die Displaygröße eines der ausschlaggebendsten Kriterien für den Kauf eines Mobiltelefons ist. Zum andern können die physischen Knöpfe als Bedienungselemente nicht nur als bekannt voraussetzen werden, sondern auch auf haptischer Ebene zu größerer Befriedigung führen. Durch die Auslagerung wird aber auch der Funktionsumfang auf den jeweiligen Geraten verringert.
+Grundsätzlich scheint der Umfang der Funktionalität zu komplex zu sein, um sie auf ein Produkt abzubilden. Eine Problematik mit der heutzutage viele Produktdesigner konfrontiert sind. es stellt sich nun auch auch die Frage, ob man einen großen Fokus auf die Benutzbarkeit oder das Design eines Produktes legt. Meistens wird in dieser Frage aus ökonomischen Gründen zu Gunsten des Design bzw. der Ästhetik entschieden.
+Mit dieser Diskrepanz setzt sich Norman in seinen Buch auseinander, dort zeigt er die Folgen und  seine selbst entwickelten Gegenmaßnahmen auf, um trotzdem ein gewissen Grad an Benutzbarkeit sicherzustellen.
 
 % Chapter A
 \setChapterQuote{A thought is an idea in transit.}{Pythagoras}{582 B.C. - 497 B.C.}
 \chapter{Alltagsdesign}
 
 
-Der das Buch geschrieben hat, ursprünglich Psychologe, setzt er sich immer mehr mit der Benutzbarkeit zuerst von Alltagsgegenständen und auch von informatischen Produkten auseinander. Sein Buch \glqq Psychology of Everyday Things \grqq ist zu großer Beliebtheit in den Kreisen der Usability Forschung und des Designs gelangt. 
+Der das Buch geschrieben hat, ursprünglich Psychologe, setzt er sich immer mehr mit der Benutzbarkeit zuerst von Alltagsgegenständen und auch von informatischen Produkten auseinander. Sein Buch \glqq The Design of Everyday Things \grqq ist zu großer Beliebtheit in den Kreisen der Usabilityforschung und des Designs gelangt. 
 
 
 Norman sieht den Ursprung von schlechten Design hauptsächlich in einen Phänomen, welches er in seinem Buch als Technologieparadoxon wie folgt beschreibt \cite[S.31]{don}:\\
@@ -163,40 +196,40 @@ Als Ausgangsbedingung dafür gibt es fünf zentrale Aspekte, die eingehalten wer
 	
 Unter den Aspekt der \textbf{Sichtbarkeit} versteht Norman Funktionalitäten transparent zu gestalten. Beispielsweise muss bei öffentlichen Waschbecken ersichtlich gemacht werden, ob diese manuell durch Knöpfe oder über Sensoren reguliert werden.\\
    
-Des Weiteren ist ein unabgegänlicher Aspekt, der des \textbf{Feedback}s. Darunter versteht man jegliche Rückmeldung des Systems, über Auswirkungen von Aktionen, sowie der daraus folgende interne Zustand des Systems. Das Feedback kann auf visueller (z.B Signalleuchten) oder auch auf akustischer Ebene erfolgen.\\
+Des Weiteren ist ein unabgänglicher Aspekt, der des \textbf{Feedback}s. Darunter versteht man jegliche Rückmeldung des Systems, über Auswirkungen von Aktionen, sowie der daraus folgende interne Zustand des Systems. Das Feedback kann auf visueller (z.B Signalleuchten) oder auch auf akustischer Ebene erfolgen.\\
  
 Das	\textbf{Mapping} bezieht sich darauf die inhärenten Funktionen des Systems auf einer Art und Weise abzubilden, sodass sie nicht nur eindeutig identifizierbar sind, sondern auch intuitiv verständlich.\\
 
 Der Aspekt der \textbf{Affordanz} basiert auf den Affordanzbegriff, der 1977 im Artikel 'The Theory of Affordances' von James Jerome Gibson eingeführt wurde. Der Begriff Affordanz leitet sich vom Englischen “to afford”(“leisten”, “anbieten”, “gewähren”) ab. Laut Gibson leiten sich Affordanzen aus Komplementarität von Umwelt und Lebewesen ab, d.h.  
 die Handlungsanregung von Dinge aufgrund der Informationen über ihre funktionell relevante Eigenschaften oder Bestandteilen der Umwelt. Dieses Zusammenspiel ermöglicht oder viel mehr suggeriert ein bestimmtes Verhalten. Wodurch die Affordanz maßgeblich für Funktionalität und Intuitivität eines Gegenstandes wird.
-Norman erweiterte diese Defintionsbegriff um den der \textit{wahrgenomme} Affordanz. Darunter fallen auch suggerierte Affordanzen, die gar nicht tatsächlich bestehen, wie beispielsweise aufgemalte Türen durch die man nicht gehen kann oder der Computermonitor, der trotz seiner Begebenheiten nicht haptisch benutzbar ist. 
+Norman erweiterte diese Definitionsbegriff um den der \textit{wahrgenommenen} Affordanz. Darunter fallen auch suggerierte Affordanzen, die gar nicht tatsächlich bestehen, wie beispielsweise aufgemalte Türen durch die man nicht gehen kann oder der Computermonitor, der trotz seiner Begebenheiten nicht haptisch benutzbar ist. 
 
 \begin{figure}
 \includegraphics{images/figure2_affordances.png}
 \caption{Affordanzen}
-\label{fig:action}
+\label{fig:affordanz}
 \end{figure}
 
-Der Designaspekt Contraints beschreibt Beschränkungen, die aufgrund bestimmmter Begebenheiten entstehen. Die Begebenheiten können von \textit{physisch}, \textit{semantisch}, \textit{kulturell} oder \textit{logische} Art sein.
+Der Designaspekt Constraints beschreibt Beschränkungen, die aufgrund bestimmter Begebenheiten entstehen. Die Begebenheiten können von \textit{physisch}, \textit{semantisch}, \textit{kulturell} oder \textit{logische} Art sein.
 
 \begin{enumerate}
-\item Bei der \textbf{physische Constraints} , sind eng mit den Affordances eines Gegenstandes verknuepft. es ist nicht moeglich ueber den affordanzraum hinaus zu handeln. Ein nicht jeder Schluessel passt ins Schloss.
-\item Die \textbf{sematische Constraints} folgen allgeemin hingueltigen Regeln, wie zum Beipiel,  das man Legosteine nur von oben oder unten zusamenbauene kann und nciht etwa von der Seite. Oder man sich beim Autofahren  nicht mit den Ruecken zum Lekrad setzen kann.
-\item Die \textbf{kulturelle Constraints} , dabei handelt es sich um Einschraenkung, die sich durch den kulturellen Hintergrund einer Person oder auch Gruppe ergeben. Sie sind soit gesellschaftlich angelernt.
-\item Die \textbf{logische Constraints} sind aufgrund bestimmter vorliegender Praemissen(koennen auch ander affordances sein) geben, oder in anderen Worten per \glqq Auschlussverfahren \grqq. Wenn drei Antworten existieren und a und b falsch sind muss infolgedessen c die richtige antwort sein. 
+\item Bei der \textbf{physische Constraints} , sind eng mit den Affordanzen eines Gegenstandes verknüpft. es ist nicht möglich über den Affordanzraum hinaus zu handeln. Nicht jeder Schlüssel passt ins Schloss.
+\item Die \textbf{semantische Constraints} folgen allgemein hin gültigen Regeln, wie zum Beispiel,  das man Legosteine nur von oben oder unten zusammenbauen kann und nicht etwa von der Seite. Oder man sich beim Autofahren  nicht mit den Rücken zum Lenkrad setzen kann.
+\item Die \textbf{kulturelle Constraints} , dabei handelt es sich um Einschränkungen, die sich durch den kulturellen Hintergrund einer Person oder auch Gruppe ergeben. Sie sind somit gesellschaftlich angelernt.
+\item Die \textbf{logische Constraints} sind aufgrund bestimmter vorliegender Prämissen (können auch andere Affordanzen sein) geben, oder in anderen Worten per \glqq Ausschlussverfahren\grqq. Wenn drei Antworten existieren und a und b falsch sind muss infolgedessen c die richtige Antwort sein. 
 \end{enumerate}
 
 
-Ein von Norman angefuehrtes Beispiel was ein Experiement, indem Probanden einen Polizeiisten aus  Lego modellieren sollten(Vgl. Abbildung).
-Uf der elementartsen Ebeme waeren die physischen Constraints, da nicht alle Legos gleich gut ineinander passen. 
-Die  Polizistfigur im Modellbausatz muss auf den Motorrad vorwärts sitzen. Der kulturelle Constraint wuerde in diesem Fall vorgeben ob eine Person die Legofigur auf die linke oder rechte Seite der Strasse stellen wuerde.  Ein logischer Constraint in diesem Beispiel ware wenn ich zwei Lichter habe(rot, weiss) und das weisse als Frontlicht benutze, muss ich das andere Licht als Ruecklicht verwenden. 
+Ein von Norman angeführtes Beispiel war ein Experiment, indem Probanden einen Polizisten aus  Lego modellieren sollten (Vgl. Abbildung).
+Auf der elementarsten Ebene wären die physischen Constraints, da nicht alle Legos gleich gut ineinander passen. 
+Die  Polizistenfigur im Modellbausatz muss auf den Motorrad vorwärts sitzen. Der kulturelle Constraint würde in diesem Fall vorgeben ob eine Person die Legofigur auf die linke oder rechte Seite der Straße stellen würde.  Ein logischer Constraint in diesem Beispiel wäre, wenn ich zwei Lichter habe (rot, weiß) und das weiße als Frontlicht benutze, muss ich das andere Licht als Rücklicht verwenden. 
 
 \section{Konzeptuelle Modelle}
 
-Das Konzeptuelle Modell eines Systems unterliegt dem gedanklichen Modells(Designmodell) des Designs, welches er als als System abbildet. Das gedankliche Modell des Benutzer wird durch sein Vorwissen und de Systembild gelbidet. Unter Systembild versteht Norman die sichtbaren Teile des Systems aufgrund dessen sich ein Benutzer die Funktionalitaet erschliesst (Hebel , Knoepfe etc.). Probleme koennen nun daruch geschehen, dass der Designer sein Designmodell nicht hinzureichend auf das Sytem abbildet, sadass sich fur den Benutzer ein falsches Systemodell darlegt, aufgrundessen er sich ein falsches Modell bildet. Order auch wenn der Designer ein Modell waehlt, welches nicht zwingend dem des Benutzers entspricht.
+Das Konzeptuelle Modell eines Systems unterliegt dem gedanklichen Modell (Designmodell) des Designers, welches er als als System abbildet. Das gedankliche Modell des Benutzers wird durch sein Vorwissen und das Systembild gebildet. Unter Systembild versteht Norman die sichtbaren Teile des Systems auf Grund deren sich ein Benutzer die Funktionalität erschließt (Hebel , Knöpfe etc.). Probleme können nun dadurch geschehen, dass der Designer sein Designmodell unzureichend auf das System abbildet, sodass sich für den Benutzer ein falsches Systemmodell darlegt, auf Grund dessen er sich ein falsches Modell bildet. Oder auch wenn der Designer ein Modell wählt, welches nicht zwingend dem des Benutzers entspricht.
 
-Daraus leiten sich fuer Norman die  zwei wichtigsten Regeln benutzerfreundlichen Designs ab. Zu einem, dass es essentiell ist für den Gebrauchsgegenstand ein gutes konzeptionelles
-Modell zu wählen und zum anderen, dass wichtige Teile sichtbar gemacht werden muessen.
+Daraus leiten sich für Norman die  zwei wichtigsten Regeln benutzerfreundlichen Designs ab. Zum einen, dass es essentiell ist für den Gebrauchsgegenstand ein gutes konzeptionelles Modell zu wählen und zum anderen, dass wichtige Teile sichtbar gemacht werden müssen.
+
 \section{Aktion}
 
 Nach Norman laufen die Aktionen in einem Zyklus ab (Vgl. Abb. \ref{fig:action}, \cite[S. 46ff]{don}). Dieser besteht aus zwei Teilen: dem Gulf of Execution und dem Gulf of Evaluation. Zuerst muss der Handelnde in seinem Kopf ein Ziel bilden wie zum Beispiel \glqq Ich möchte lesen (können, aber dazu ist es zu dunkel).\grqq Um eine Handlung auszuführen, muss er nun den Gulf of Execution überbrücken. Hierzu muss er zuerst die Intention bilden \glqq Ich schalte die Leselampe an.\grqq, die Aktion spezifizieren \glqq Ich muss den Arm ausstrecken, den Schalter fassen und den Schalter umlegen.\grqq und die Aktion schließlich auch wirklich ausführen. Als Resultat ändert sich der Zustand der Welt. Um diesen wahrzunehmen und zu bewerten, muss der Handende nun den Gulf of Evaluation überbrücken. Dies beginnt damit, dass der Zustand der Welt wahrgenommen wird \glqq Es ist (nicht) hell.\grqq Danach wird der Zustand der Welt interpretiert: \glqq Die Lampe scheint (nicht).\grqq Letztlich wird das Ergebnis evaluiert: \glqq Ich kann jetzt (immer noch nicht) lesen.\grqq
@@ -224,7 +257,7 @@ Norman unterscheidet sechs verschiedene Arten von Fehlleistungen\cite[S. 107]{do
 
 \begin{itemize}
 \item \textbf{Fangfehler} sind Fehler, die passieren, wenn die Anfangssequenz von zwei Aktionen identisch sind, wobei die beabsichtigte Aktion unvertrauter ist und daher von der vertrauteren \glqq aufgefangen\grqq wird. Zum Beispiel, wenn man sein Geburtsdatum schreiben soll, aber als Jahr das aktuelle Jahr einträgt.
-\item \textbf{Beschreibungsfehler} erfolgen, wenn zwei Aktionen viel Ähnlichkeit miteinander haben. Oft wird nur ein Gegenstand dabei ausgewechselt, also zum Beispiel wird die Dreckwäsche nicht in den Wäschekorb, sondern in die Toilette wirft, die direkt daneben steht: Aufklappen -- reinwerfen -- zuklappen.
+\item \textbf{Beschreibungsfehler} erfolgen, wenn zwei Aktionen viel Ähnlichkeit miteinander haben. Oft wird nur ein Gegenstand dabei ausgewechselt, also zum Beispiel wird die Dreckwäsche nicht in den Wäschekorb, sondern in die Toilette wirft, die direkt daneben steht: Aufklappen -- rein werfen -- zuklappen.
 \item \textbf{Datengesteuerte Fehler} kommen vor, wenn man zwei verschiedene Daten miteinander vertauscht, vor allem, wenn man das falsche Datum in dem Moment sieht, wenn man also zum Beispiel statt der Telefonnummer die Raumnummer wählt.
 \item \textbf{Fehler durch assoziative Aktivierung} finden dann statt, wenn die Impulse zur Aktivierung dieser Aktionen ähnlich sind und deshalb die falsche Handlung ausgeführt wird, zum Beispiel, wenn man in das Telefon \glqq Herein!\grqq  ruft.
 \item \textbf{Fehler durch Aktivierungsverlust} geschehen aufgrund einer Aktion, die während einer anderen Handlung ausgeführt wird, diese vergessen wird. Das typische Beispiel ist, dass man nachdem man die Tür zu einem Raum geöffnet hat und in diesem steht man nicht mehr weiß, was man dort tun wollte.
@@ -242,7 +275,7 @@ Irrtümer sind im Gegensatz zu Fehlleistungen oft nur schwer oder spät zu erken
 Die Funktionsweise von allen Dingen, die komplexer sind als ein gewöhnlicher Hocker, muss der Benutzer auf irgendeine Weise erlernt haben. Dies kann grundsätzlich auf zwei verschiedene Arten geschehen: Zum Einen kann der Benutzer das Wissen über die Funktionsweise auswendig gelernt haben; das Wissen befindet sich also im Kopf. Zum Anderen kann sich das Wissen auch direkt aus dem Design erschließen (siehe dazu Kapitel \ref{sec:aspekte}), das Wissen ist also unmittelbar bei jeder Benutzung verfügbar \cite[S. 54ff]{don}. 
 Dabei bestehen zwischen beiden Möglichkeiten mehrere Trade-offs:
 
-\begin{tabular}{|p{.4\textwidth}|p{.4\textwidth}|}\hline\vspace{6pt}
+\begin{tabular}{p{.4\textwidth}p{.4\textwidth}}\vspace{6pt}
 \hspace{1cm}\textbf{Wissen im Kopf} & \vspace{6pt}\hspace{1cm}\textbf{Verfügbares Wissen}\\
 \begin{itemize}
 \item Großer Lernaufwand
@@ -258,7 +291,7 @@ Dabei bestehen zwischen beiden Möglichkeiten mehrere Trade-offs:
 \item Erste Verwendung leicht
 \item Abhängig von der Umgebung
 \end{itemize}
-\\\hline
+\\
 \end{tabular}
 
 Welche Art nun gewählt wird, hängt stark von dem Anwendungskontext ab, wobei im Regelfall eine Mischung von beidem vorliegt, so dass der erfahrene Benutzer nicht mehr nachschauen muss, wie es funktioniert. Hierfür ist die Schreibmaschinentastatur ein perfektes Beispiel: Benutzer, die das zehn-Finger-System beherrschen, brauchen nicht mehr auf die Tastatur zu schauen um jeden einzelnen Buchstaben zu finden, womit sich ein unerfahrener Benutzer aber durchaus noch behelfen kann, auch wenn er für die gleiche Menge an Text deutlich länger brauchen wird.\\
@@ -297,7 +330,7 @@ Auch die Verhaltensebene ist bei dem iPod sehr gut eingebracht: Die wichtigen Be
 Auch auf der reflektierenden Ebene stellt der iPod seine Qualität zur Schau: Er ist zu einem Statussymbol geworden, das einen gewissen Wohlstand und auch Trendbewusstsein widerspiegelt. 
 
 
-Dabei muss jedem Level eine besondere Beachtung geschenkt werden, da es eine Arbeitsweise von Benutzern widerspiegelt und dementsprechend einen eigenen Designstil erfordert. Zu beachten ist dabei, dass sich die Prinzipien der einzelnen Ebenen teilweise gegenseitig widersprechen. Dem zu Grunde liegend ist es nur allzu verständlich, dass nicht alle Ebenen kompromissfrei abgedeckt werden können. 
+Dabei muss jedem Level eine besondere Beachtung geschenkt werden, da es eine Arbeitsweise von Benutzern widerspiegelt und dementsprechend einen eigenen Designstil erfordert. Zu beachten ist dabei, dass sich die Prinzipien der einzelnen Ebenen teilweise gegenseitig widersprechen. Dem zu Grunde liegend ist es nur allzu verständlich, dass nicht alle Ebenen kompromisslos abgedeckt werden können. 
 Zudem kommt, dass bei unterschiedlichen Gefühlslagen verschiedene Arten von Denkprozessen stattfinden. Gemäß dieser Aussage verwendet man beispielsweise bei einer positiven Gefühlslage Denkstrukturen, die einer Breitensuche gleichen, man denkt also kreativer und mehr out-of-the-box. Analog dazu gleichen die Denkstrukturen bei einer negativen Gefühlslage denen einer Tiefensuche, man ist stark fokussiert und detailbewusster.
 
 Aus der drei Ebenen Theorie und der Tatsache, dass die emotionale Lage eines Benutzers seine Denkstrukturen maßgeblich vorgibt, lässt sich zum Einen ableiten wie beziehungsweise auf welchen Ebenen der Benutzer die Gegenstände wahrnimmt, zum Anderen, dass die Gegenstände ebenfalls den Benutzer beeinflussen. Somit wäre gewissermaßen eine Symbiose zwischen Benutzer und Gegenständen auf emotionaler Ebene hergestellt. Unter Berücksichtigung dieser Wechselbeziehung muss bei den vorgestellten Designprinzipien von Norman ein größerer Fokus auf die Ästhetik und die ideellen Werte gelegt werden.
@@ -307,22 +340,22 @@ Aus der drei Ebenen Theorie und der Tatsache, dass die emotionale Lage eines Ben
 \chapter{Resümee}
 \section{Resümee}
 
-Aus der Problematik heraus, dass Systeme zunehmend komplexer werden und diese Funktionalitäten nur beschraenkt sichtbar auf den Geraet gemacht werden konenen, erhoeht sich die Schwierigkeit in der Benutzbarkeit fuer den User. Zusaeetzlich werden viele Funktionalitaeten auch auf Grund der Aesthetik versteckt, was die  Benutzbarkeit noch weiter erschwert. Auch wenn Benutzbarkeit oft vernachlaesst wird, ist sie schluessendlich essentiell fuer den Umgang mit Gegenstaenden und definiert nicht nur die Nutzbarkeit sondern auch die Freude daran es zu benutzen. Freude macht alles was leicht(intuitiv) zu benutzen ist und/oder Spass macht es zu benutzen. \\
-Wenn man dieser Beobachtung Beachtung schenken will, muss man sich daruber in klaren sein, das verschiedene Parteien von Menschen in den Designprozess  eines Systes involviert sind, deren Verhalten wiederum durch unterschiedliche Faktoren motiviert ist. Darueber hinaus wird ist System selbst durch uber seine inherente Eigentschaften (Sichtbarkeit, Affordanz, Contraints) definiert. Die kognitive Vorgaenge der involvierten Personen(Wahrnehmung, Fehler, Wissen) bestimmmen ihr jeweilige Vorstellung von dem System wir auch die Benutzungsweise des Systems. \\ 
-Auf der einen Seite gibt es eine Beziehung zwischen Designer und System. Der Designer sich ein Designmodell kreiert und dieses als System abbildet. Wobei er sich ueber seine Benutzergruppe im Klaren sein sollte und in ihren Intresse entwerfen und nicht etwa nur aus seiner persoenlichen Sicht heraus.
-Die sichtbaren Teile eines solchen Systems defineren das Systemmodell. Der Benutzer wiederum erstellt sich basierend auf seiner bisheriger Erfahrung und den Systemmodell das Benutzermodell.\\
-Um zugewaehrleisten das Benutzermodell mit dem Designermodell uebereinstimmt oder gegebenfalls angepasst wird, sollte ein gutes Mapping und gegenuegend Feedback vorhanden sein. Ein richtiges Benutzermodell sorgt dafuer, dass der Benutzer seine notwendigen Aktionen intuitiv richtig ableiten, dies erhoeht nicht nur die Benuzbarkeit nicht nur auf dfunktionaler ebene sondern auch den Spassfaktor(Userexperience) allgemein. \\ 
-Generell haben Emotionen einen weitaus groesseren Einfluss auf das Verhalten der Menschen als urspruenglich angenommen. Die zunehmender Wichtigkeit von Userexperience beim dem Designen von Systemen sorgt dafuer, dass immer mehr Modelle im Fachgebiet Design entstehen, die diese beruecksichtigen.
-Eins davon ist das vorgestellte drei Ebenen Modell nach Norman. Durch dieses wird auch die Aesthetik in den Designprozess mit einbezogen und die Benutzbarkeit, die Norman in seinem ersten Buch so hervorhebt, ist in diesem Modell nur ein Aspekt von dreien. \\
-Die oben aufgezaehlten Faktoren sind allerdings kaum oder nur schwer in einen Softwaredesignprozess zu integrieren, da sie meist kognitive Natur sind und somit nahe zu unmoeglich formalisierbar. Zudem  wird von den designer zuzeit immer noch nicht genug Gravitaet auf die Benutzbarkeit von Produkten gelegt, wobei dies sich in Zukunft aendern mag.
+Aus der Problematik heraus, dass Systeme zunehmend komplexer werden und diese Funktionalitäten nur beschränkt sichtbar auf den Gerät gemacht werden können, erhöht sich die Schwierigkeit in der Benutzbarkeit für den User. Zusätzlich werden viele Funktionalitäten auch auf Grund der Ästhetik versteckt, was die  Benutzbarkeit noch weiter erschwert. Auch wenn Benutzbarkeit oft vernachlässigt wird, ist sie schlussendlich essentiell für den Umgang mit Gegenständen und definiert nicht nur die Nutzbarkeit sondern auch die Freude daran es zu benutzen. Freude macht alles was leicht (intuitiv) zu benutzen ist und/oder Spaß macht es zu benutzen. \\
+Wenn man dieser Beobachtung Beachtung schenken will, muss man sich darüber in klaren sein, das verschiedene Parteien von Menschen in den Designprozess  eines Systems involviert sind, deren Verhalten wiederum durch unterschiedliche Faktoren motiviert ist. Darüber hinaus wird ist System selbst durch über seine inhärente Eigenschaften (Sichtbarkeit, Affordanz, Constraints) definiert. Die kognitive Vorgänge der involvierten Personen(Wahrnehmung, Fehler, Wissen) bestimmen ihr jeweilige Vorstellung von dem System wir auch die Benutzungsweise des Systems. \\ 
+Auf der einen Seite gibt es eine Beziehung zwischen Designer und System. Der Designer sich ein Designmodell kreiert und dieses als System abbildet. Wobei er sich über seine Benutzergruppe im Klaren sein sollte und in ihren Interesse entwerfen und nicht etwa nur aus seiner persönlichen Sicht heraus.
+Die sichtbaren Teile eines solchen Systems definieren das Systemmodell. Der Benutzer wiederum erstellt sich basierend auf seiner bisheriger Erfahrung und den Systemmodell das Benutzermodell.\\
+Um zu gewährleisten das Benutzermodell mit dem Designermodell übereinstimmt oder gegebenenfalls angepasst wird, sollte ein gutes Mapping und genügend Feedback vorhanden sein. Ein richtiges Benutzermodell sorgt dafür, dass der Benutzer seine notwendigen Aktionen intuitiv richtig ableiten, dies erhöht nicht nur die Benutzbarkeit nicht nur auf funktionaler ebene sondern auch den Spaßfaktor (Userexperience) allgemein. \\ 
+Generell haben Emotionen einen weitaus größeren Einfluss auf das Verhalten der Menschen als ursprünglich angenommen. Die zunehmender Wichtigkeit von Userexperience beim dem Designen von Systemen sorgt dafür, dass immer mehr Modelle im Fachgebiet Design entstehen, die diese berücksichtigen.
+Eins davon ist das vorgestellte drei Ebenen Modell nach Norman. Durch dieses wird auch die Ästhetik in den Designprozess mit einbezogen und die Benutzbarkeit, die Norman in seinem ersten Buch so hervorhebt, ist in diesem Modell nur ein Aspekt von dreien. \\
+Die oben aufgezählten Faktoren sind allerdings kaum oder nur schwer in einen Softwaredesignprozess zu integrieren, da sie meist kognitive Natur sind und somit nahe zu unmöglich formalisierbar. Zudem  wird von den Designer zurzeit immer noch nicht genug Gewichtung auf die Benutzbarkeit von Produkten gelegt, wobei dies sich in Zukunft ändern mag.
 
 
 \section{Bezug auf den Kurs}
 
-Die von uns vorgestellt Prinzipien vom guten Design, konenten in abgewandelter Form in jeden der Beitraege, die i Rahmen der Veranstaltunng gehalten wurden, wiedergefunden werden. Dies ist nicht weiter verwunderlich, da es sich dabei um allgemeine Prizipien handelt, die gebietuebergreifend angewand werden koennen. Selbstverstaendlich muessen je nach Gebiet bestimmte Prinzipien priorisiert werden. Beispielsweise Sichtbarkeit fuer Blinde eher zuvernachlaessigen, dafuer Feedback, um so wichtiger.\\
-Hingegen gilt "`kenne deinen User"' fuer alle, was auch in den Vortraegen deutlich wurde, da anfaenglich immmer die Benutzergruppen mit ihren Faehigkeiten und Beduerfnissen ausgiebig erlaeutert wurden, was sich auch fuer den Designprozess als unabdingbar erwies.  \\
+Die von uns vorgestellt Prinzipien vom guten Design, könnten in abgewandelter Form in jeden der Beiträge, die i Rahmen der Veranstaltung gehalten wurden, wiedergefunden werden. Dies ist nicht weiter verwunderlich, da es sich dabei um allgemeine Prinzipien handelt, die gebietsübergreifend angewandt werden können. Selbstverständlich müssen je nach Gebiet bestimmte Prinzipien priorisiert werden. Beispielsweise Sichtbarkeit für Blinde eher zu vernachlässigen, dafür Feedback, um so wichtiger.\\
+Hingegen gilt "`kenne deinen User"' für alle, was auch in den Vorträgen deutlich wurde, da anfänglich immer die Benutzergruppen mit ihren Fähigkeiten und Bedürfnissen ausgiebig erläutert wurden, was sich auch für den Designprozess als unabdingbar erwies.  \\
 
-Als gemeinsame Schnittmenge konnten wir folgende Richtlinien indentifizieren, wobei wir kein Anspruch auf Vollstaendigkeit erheben:
+Als gemeinsame Schnittmenge konnten wir folgende Richtlinien identifizieren, wobei wir kein Anspruch auf Vollständigkeit erheben:
 \begin{itemize}
 \item Bei der Gutes konzeptionelles Modell bereitstellen
 \item Die Dinge sichtbar machen, darunter fallen auch der Systemzustand sowie die Handlungsmöglichkeiten
@@ -331,7 +364,10 @@ Als gemeinsame Schnittmenge konnten wir folgende Richtlinien indentifizieren, wo
 
 Und ein wichtiger, wenn auch nur indirekt genannter Punkt \textbf{kenne deinen Benutzer!}. 
 
+%Abbildungsverzeichnis
 
+htc mini: \url{http://www.nexustalk.de/wp-content/uploads/2013/01/htc-mini-fernbedienung.jpg}, abgerufen am 24.2.2013
+htc butterfly: \url{http://scr.wfcdn.de/8182/HTC-Butterfly-1354876006-0-0.jpg}, abgerufen am 24.2.2013
 
 \begin{thebibliography}{9}
 	\bibitem {don} Norman, Donald (1988). The Design of Everyday Things. New York: Basic Books. ISBN 978-0-465-06710-7 
